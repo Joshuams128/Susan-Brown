@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Susan M. Brown - Workshop Facilitator Website
 
-## Getting Started
+A professional Next.js website for Susan M. Brown, a trauma-informed workshop facilitator specializing in building confidence, resilience, and strength for women, caregivers, and teams.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
+- **Modern Next.js 16** with App Router
+- **Tailwind CSS v4** for styling with custom brand colors
+- **TypeScript** for type safety
+- **Responsive Design** - Mobile-first approach
+- **SEO Optimized** - Meta tags, Open Graph, and structured data
+- **Accessibility** - WCAG compliant with skip links and semantic HTML
+- **Performance** - Static generation and optimized images
+- **Contact Form** - Integrated contact form with API route
+- **Calendly Integration** - Easy workshop booking
+
+## 🚀 Getting Started
+
+### Installation
+
+\`\`\`bash
+npm install
+\`\`\`
+
+### Development
+
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+\`\`\`bash
+npm run build
+npm start
+\`\`\`
 
-## Learn More
+## 📝 Content Management
 
-To learn more about Next.js, take a look at the following resources:
+### Adding a New Workshop
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit \`/data/workshops.ts\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Adding a New Testimonial
 
-## Deploy on Vercel
+Edit \`/data/testimonials.ts\`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Updating Site Configuration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Edit \`/data/siteConfig.ts\` for email, social links, and Calendly URL
+
+## 🎯 Workshops
+
+1. **Strong From the Inside Out™** (Featured)
+2. **Confident & Unshakable™**
+3. **Sleep for a Stronger You™**
+4. **Thriving Through Change™**
+5. **Wellness for Caregivers™**
+
+## 📱 Pages
+
+- \`/\` - Homepage
+- \`/about\` - About Susan
+- \`/workshops\` - All workshops
+- \`/workshops/[slug]\` - Workshop details
+- \`/testimonials\` - Client testimonials
+- \`/contact\` - Contact form
+- \`/book\` - Calendly booking
+
+## 🛠️ Tech Stack
+
+- Next.js 16
+- Tailwind CSS v4
+- TypeScript
+- React 19
+
+© 2025 Susan M. Brown. All rights reserved.

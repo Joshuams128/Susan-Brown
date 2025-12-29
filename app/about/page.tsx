@@ -1,266 +1,198 @@
-'use client';
+import { Metadata } from 'next';
+import Hero from '@/components/sections/Hero';
+import Container from '@/components/ui/Container';
+import SectionHeading from '@/components/ui/SectionHeading';
+import CTASection from '@/components/sections/CTASection';
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+export const metadata: Metadata = {
+  title: 'About Susan M. Brown | Workshop Facilitator & Foster Parent',
+  description: "Learn about Susan's journey from surviving to strong, her credentials, and her mission to help others build resilience.",
+};
 
-export default function About() {
+export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-tan">
-      <Header />
+    <>
+      <Hero
+        headline="Trauma-Informed Workshop Facilitator | Foster Parent | Creator of Strong From the Inside Out™"
+      />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h1
-              className="text-5xl md:text-6xl font-serif font-bold text-charcoal mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              About Susan
-            </motion.h1>
-            <motion.p
-              className="text-xl text-charcoal/70 leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Creating compassionate spaces for healing and transformation
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* Story Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              className="bg-white rounded-lg p-8 md:p-12 shadow-lg mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-6">
-                My Journey
-              </h2>
-              <div className="space-y-6 text-lg text-charcoal/80 leading-relaxed">
-                <p>
-                  My path to becoming a trauma-informed facilitator began with my own 
-                  healing journey. After experiencing the profound impact of compassionate, 
-                  body-aware practices in my own life, I knew I wanted to create spaces 
-                  where others could experience this same transformative healing.
-                </p>
-                <p>
-                  For over 15 years, I've dedicated myself to understanding the intricate 
-                  ways trauma affects our minds, bodies, and spirits. I've studied with 
-                  leading experts in somatic psychology, mindfulness, and trauma recovery, 
-                  always seeking to deepen my capacity to serve those on their healing paths.
-                </p>
-                <p>
-                  What drives me is witnessing the resilience of the human spirit. Time and 
-                  again, I've seen individuals courageously face their pain, reclaim their 
-                  stories, and discover an inner strength they didn't know they possessed. 
-                  It's an honor to walk alongside people during these sacred moments of growth.
-                </p>
-                <p>
-                  My approach is rooted in the belief that healing is not about "fixing" 
-                  ourselves, but about creating the conditions for our innate wholeness to 
-                  emerge. Every person carries within them the capacity for healing—sometimes 
-                  they just need a safe space and gentle guidance to access it.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Philosophy */}
-            <motion.div
-              className="bg-mint/10 rounded-lg p-8 md:p-12 mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-6">
-                My Philosophy
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <span className="text-mint text-2xl mr-4">•</span>
-                  <p className="text-lg text-charcoal/80">
-                    <strong className="text-charcoal">Safety First:</strong> Creating environments 
-                    where participants feel physically and emotionally safe is foundational to all healing work.
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-mint text-2xl mr-4">•</span>
-                  <p className="text-lg text-charcoal/80">
-                    <strong className="text-charcoal">Body Wisdom:</strong> Our bodies hold profound 
-                    wisdom. By learning to listen to and trust our somatic experiences, we access 
-                    powerful pathways to healing.
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-mint text-2xl mr-4">•</span>
-                  <p className="text-lg text-charcoal/80">
-                    <strong className="text-charcoal">Compassionate Presence:</strong> Healing happens 
-                    in relationship. I bring my full, authentic presence to each workshop, modeling 
-                    the self-compassion I hope participants will discover.
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <span className="text-mint text-2xl mr-4">•</span>
-                  <p className="text-lg text-charcoal/80">
-                    <strong className="text-charcoal">Individual Pace:</strong> Everyone's healing 
-                    journey is unique. I honor each person's timeline and readiness, never pushing 
-                    beyond what feels safe.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Credentials Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-8 text-center">
-                Credentials & Training
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-tan p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4">Education</h3>
-                  <ul className="space-y-3 text-charcoal/80">
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>Master's in Clinical Psychology</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>Bachelor's in Psychology, Minor in Neuroscience</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-tan p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4">Certifications</h3>
-                  <ul className="space-y-3 text-charcoal/80">
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>Certified Trauma-Informed Facilitator</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>Somatic Experiencing Practitioner (SEP)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>MBSR Teacher Certification</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-tan p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4">Specialized Training</h3>
-                  <ul className="space-y-3 text-charcoal/80">
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>Internal Family Systems (IFS) Level 1 & 2</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>Polyvagal Theory Clinical Applications</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>Mindful Self-Compassion (MSC)</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-tan p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4">Experience</h3>
-                  <ul className="space-y-3 text-charcoal/80">
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>15+ years facilitating trauma healing workshops</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>1000+ individuals supported</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-mint mr-2">•</span>
-                      <span>Ongoing supervision and professional development</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-mint/10 p-8 rounded-lg">
-                <h3 className="text-2xl font-serif font-bold text-charcoal mb-4">
-                  Continuing Education
-                </h3>
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  I'm committed to ongoing learning and regularly participate in advanced training, 
-                  supervision, and consultation. The field of trauma recovery is constantly evolving, 
-                  and I believe staying current with research and best practices is essential to 
-                  serving my participants well.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-mint">
-        <div className="container mx-auto">
-          <motion.div
-            className="max-w-3xl mx-auto text-center text-white"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-              Ready to Start Your Healing Journey?
-            </h2>
-            <p className="text-xl mb-8 opacity-90 leading-relaxed">
-              I'd be honored to support you. Book a consultation to learn more 
-              about my workshops and approach.
+      {/* My Story Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <Container>
+          <SectionHeading centered className="mb-12">
+            From Surviving to Strong
+          </SectionHeading>
+          
+          <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p>
+              For most of my life, I moved through the world quietly. I thought shrinking 
+              was safer than taking up space. Life, motherhood, and 15+ years fostering 
+              children with big feelings and even bigger stories taught me something profound:
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/book"
-                className="bg-white text-mint px-8 py-4 rounded-full hover:bg-tan transition-all duration-300 font-medium shadow-lg hover:shadow-xl"
-              >
-                Book a Consultation
-              </Link>
-              <Link
-                href="/workshops"
-                className="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-mint transition-all duration-300 font-medium shadow-lg hover:shadow-xl"
-              >
-                View Workshops
-              </Link>
-            </div>
-          </motion.div>
-        </div>
+            
+            <p className="font-semibold text-charcoal italic">
+              Strength isn&apos;t loud. Strength is steady. Strength is who you decide to 
+              become when the world gets heavy.
+            </p>
+            
+            <p>
+              My journey hasn&apos;t been perfect. It&apos;s been messy, emotional, and 
+              transformative. I had to learn how to regulate my nervous system. I had to 
+              unlearn the belief that I wasn&apos;t enough. I had to rebuild myself piece by piece.
+            </p>
+            
+            <p>Through that process, I found something powerful:</p>
+            
+            <ul className="list-disc list-inside space-y-2 pl-4">
+              <li>My voice</li>
+              <li>My confidence</li>
+              <li>My purpose</li>
+            </ul>
+            
+            <p>
+              And now, I bring that experience to groups, teams, and organizations, teaching 
+              tools and strategies that build resilience, confidence, and emotional strength 
+              from the inside out.
+            </p>
+          </div>
+        </Container>
       </section>
 
-      <Footer />
-    </div>
+      {/* Credibility Section */}
+      <section className="py-16 md:py-24 bg-tan-50">
+        <Container>
+          <SectionHeading centered className="mb-8">
+            Why You Can Trust Me
+          </SectionHeading>
+          
+          <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+            I&apos;m a trauma-informed certified facilitator with extensive experience designing 
+            and delivering workshops for women, caregivers, and high-performing teams.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="w-12 h-12 bg-mint-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
+                ✓
+              </div>
+              <p className="text-gray-700">
+                15+ years as a foster parent, guiding children through emotional and behavioral challenges
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="w-12 h-12 bg-mint-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
+                ✓
+              </div>
+              <p className="text-gray-700">
+                Creator of the Strong From the Inside Out™ workshop series, focusing on nervous 
+                system regulation, confidence, and resilience
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="w-12 h-12 bg-mint-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
+                ✓
+              </div>
+              <p className="text-gray-700">
+                Experienced facilitator for organizations, nonprofits, and caregiver associations
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="w-12 h-12 bg-mint-400 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
+                ✓
+              </div>
+              <p className="text-gray-700">
+                Workshops combine practical tools, neuroscience-informed strategies, and emotional support
+              </p>
+            </div>
+          </div>
+          
+          <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto font-semibold">
+            My workshops are interactive, practical, and designed to create real, lasting results.
+          </p>
+        </Container>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <Container>
+          <SectionHeading centered className="mb-8">
+            My Mission
+          </SectionHeading>
+          
+          <div className="max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 mb-6 text-center">
+              I help women, caregivers, and teams:
+            </p>
+            
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-mint-400 rounded-full flex items-center justify-center text-white font-bold text-sm mt-1">
+                  ✓
+                </div>
+                <p className="text-lg text-gray-700">
+                  Build emotional resilience and steady confidence
+                </p>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-mint-400 rounded-full flex items-center justify-center text-white font-bold text-sm mt-1">
+                  ✓
+                </div>
+                <p className="text-lg text-gray-700">
+                  Reduce stress and prevent burnout
+                </p>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-mint-400 rounded-full flex items-center justify-center text-white font-bold text-sm mt-1">
+                  ✓
+                </div>
+                <p className="text-lg text-gray-700">
+                  Gain practical tools they can use immediately in life and work
+                </p>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-mint-400 rounded-full flex items-center justify-center text-white font-bold text-sm mt-1">
+                  ✓
+                </div>
+                <p className="text-lg text-gray-700">
+                  Step into their power with clarity and courage
+                </p>
+              </li>
+            </ul>
+            
+            <p className="text-lg text-gray-700 text-center italic">
+              I believe that strong, confident individuals create stronger teams, communities, 
+              and organizations — and my workshops are designed to make that happen.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Why My Workshops Work */}
+      <section className="py-16 md:py-24 bg-mint-50">
+        <Container>
+          <SectionHeading centered className="mb-8">
+            Why My Workshops Work
+          </SectionHeading>
+          
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center leading-relaxed">
+            Because I&apos;ve been there. I know what it feels like to feel overwhelmed, 
+            undervalued, or drained. I also know what it takes to reclaim confidence, regulate 
+            your nervous system, and stand steady in any situation. When you work with me, 
+            you&apos;re not just getting a facilitator — you&apos;re getting someone who has 
+            walked the journey, mastered the tools, and delivers workshops that actually work.
+          </p>
+        </Container>
+      </section>
+
+      <CTASection
+        headline="Ready to bring confidence, resilience, and practical tools to your team or group?"
+        primaryCTA={{ label: 'Book a Workshop', href: '/book' }}
+        secondaryCTA={{ label: 'View Workshops', href: '/workshops' }}
+        background="mint"
+      />
+    </>
   );
 }

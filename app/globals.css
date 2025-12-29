@@ -1,27 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-mint: #5CBFAD;
-  --color-tan: #F5F0E8;
-  --color-charcoal: #2C2C2C;
+  /* Color palette */
+  --color-mint-50: #f0fdf9;
+  --color-mint-100: #ccfbef;
+  --color-mint-200: #99f6de;
+  --color-mint-300: #5ceaca;
+  --color-mint-400: #5CBFAD;
+  --color-mint-500: #14b8a6;
+  --color-mint-600: #0d9488;
+  --color-mint-700: #0f766e;
+  --color-mint-800: #115e59;
+  --color-mint-900: #134e4a;
   
+  --color-tan-50: #FDFBF7;
+  --color-tan-100: #F5F0E8;
+  --color-tan-200: #EDE8DF;
+  --color-tan-300: #DDD5C8;
+  --color-tan-400: #C4B8A5;
+  
+  --color-charcoal: #2D3436;
+  --color-warm-black: #1A1A1A;
+  
+  /* Fonts */
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
-:root {
-  --mint-teal: #5CBFAD;
-  --warm-tan: #F5F0E8;
-  --charcoal: #2C2C2C;
-}
-
-body {
-  background: var(--warm-tan);
-  color: var(--charcoal);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
+
+/* Skip to main content link for accessibility */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-to-main:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-mint-400);
+  color: white;
+  border-radius: 0.5rem;
+}
+
+
