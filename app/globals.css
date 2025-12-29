@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mint: #5CBFAD;
+  --color-tan: #F5F0E8;
+  --color-charcoal: #2C2C2C;
+  
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --mint-teal: #5CBFAD;
+  --warm-tan: #F5F0E8;
+  --charcoal: #2C2C2C;
+}
+
+body {
+  background: var(--warm-tan);
+  color: var(--charcoal);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
