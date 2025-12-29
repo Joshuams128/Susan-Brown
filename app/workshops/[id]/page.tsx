@@ -6,7 +6,27 @@ import { useParams } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const workshopData: Record<string, any> = {
+interface WeeklyOutlineItem {
+  week: number;
+  topic: string;
+  focus: string;
+}
+
+interface WorkshopInfo {
+  title: string;
+  subtitle: string;
+  description: string;
+  duration: string;
+  format: string;
+  price: string;
+  icon: string;
+  overview: string;
+  whoFor: string[];
+  whatYouWillLearn: string[];
+  weeklyOutline: WeeklyOutlineItem[];
+}
+
+const workshopData: Record<string, WorkshopInfo> = {
   'healing-from-trauma': {
     title: 'Healing from Trauma',
     subtitle: 'A Journey Toward Wholeness',
@@ -294,7 +314,7 @@ export default function WorkshopDetail() {
                 Who This Workshop Is For
               </h2>
               <ul className="space-y-3">
-                {workshop.whoFor.map((item: string, index: number) => (
+                {workshop.whoFor.map((item, index) => (
                   <li key={index} className="flex items-start text-lg text-charcoal/80">
                     <span className="text-mint mr-3 mt-1">✓</span>
                     <span>{item}</span>
@@ -315,7 +335,7 @@ export default function WorkshopDetail() {
                 What You'll Learn
               </h2>
               <ul className="space-y-3">
-                {workshop.whatYouWillLearn.map((item: string, index: number) => (
+                {workshop.whatYouWillLearn.map((item, index) => (
                   <li key={index} className="flex items-start text-lg text-charcoal/80">
                     <span className="text-mint mr-3 mt-1">•</span>
                     <span>{item}</span>
@@ -336,7 +356,7 @@ export default function WorkshopDetail() {
                 Weekly Outline
               </h2>
               <div className="space-y-4">
-                {workshop.weeklyOutline.map((week: any, index: number) => (
+                {workshop.weeklyOutline.map((week, index) => (
                   <div key={index} className="border-l-4 border-mint pl-6 py-2">
                     <h3 className="font-semibold text-charcoal text-lg">
                       Week {week.week}: {week.topic}
