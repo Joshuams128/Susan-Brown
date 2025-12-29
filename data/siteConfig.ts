@@ -8,5 +8,5 @@ export const siteConfig = {
     linkedin: 'https://linkedin.com/in/susanmbrown',
     instagram: 'https://instagram.com/susanmbrown',
   },
-  calendlyUrl: 'https://calendly.com/susanmbrown',
+  calendlyUrl: 'https://calendly.com/YOUR-USERNAME/YOUR-EVENT',  // Replace with your actual Calendly link
 };
